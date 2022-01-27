@@ -1,0 +1,247 @@
+
+============================================================================================================================
+||Erro de alteração no git||
+============================
+$ git push origin principal
+Para https://github.com/Aguinaldo01/livro-receitas.git
+ ! [rejeitado] main -> main (buscar primeiro)
+erro: falha ao enviar algumas referências para 'https://github.com/Aguinaldo01/livro-receitas.git'
+dica: as atualizações foram rejeitadas porque o controle remoto contém trabalho que você faz
+dica: não tem localmente. Isso geralmente é causado por outro repositório empurrando
+dica: para a mesma ref. Você pode querer primeiro integrar as alterações remotas
+dica: (por exemplo, 'git pull ...') antes de empurrar novamente.
+dica: Veja a 'Nota sobre avanços rápidos' em 'git push --help' para detalhes.
+falha acima corrigida pelo comando git push origin master.
+
+
+
+
+
+
+============================================================================================================================
+||Comandos GIT/GITHUB||
+=======================
+git init - starta o guit
+git remote add origin https://github.com/Aguinaldo01/testes-aulas // para poder dizer aonde estão seus arquivos
+git branch -m main master (mudar o usuário para master)
+//git remote remove origin //remove a origem
+git status verifica se tem algum arquivo pra mandar pro git
+git add * adiciona tudo
+git add [arquivo] sobe o arquivo
+git rm remove o arquivo
+git commit -m "texti a ser inserido no comentário"
+git push origin master[dependendo do usuário] envia a atualização para o git
+git pull origin master sincroniza em caso de modificações externas
+
+sequencia:
+git init > git status > git add * > git commit > git push origin master
+
+
+
+============================================================================================================================
+||Aulas de redes||
+==================
+
+
+aulas da DIO.ME
+backbone faz a unificação da rede de computadores
+tcp - protocolo de comunicação entre computadores
+4 camadas > fisica > rede > transporte > aplicação
+
+tcp x UDP 
+
+>> UDP
+rapido
+não confiavel
+carro do ovo (não rastreia pra onde vai)
+livestream
+
+>> TCP
+voltado a conexão
+handshake
+integridade, ordem dos dados
+aplicativo de mensagens de texto
+
+portas
+20: FTP
+22: ssh
+25: smtp
+53: dns
+80: http
+443: https
+
+modem transforma o dado em algo intendível pelo usuário.
+
+roteador
+pode ser burro pois manda pra qualquer um
+
+switch 
+distribui de forma inteligente
+
+wep chaves de 64 bit e 128
+wpa chave trocada periodicamente
+wpa2 + seguranca + processamento
+
+
+
+============================================================================================================================
+||Aula de HTML||
+================
+
+<html>
+A tag html é a raiz do seu documento, todos os elementos HTML devem estar dentro dela, ela indica o idioma do documento.
+
+<head>
+Contem elementos que serão lidos pelo navegador, ex charset, que é a codificação de caracteres, o mais comum é o UTF-8, o JavaScript com a tag script, o CSS através das tags style e link 
+
+<body>
+Aqui irá todo conteúdo visível ao usuário como textos, imagens, videos....
+
+<section>
+Representa uma seção genérica de conteúdo quando não houver um elemento mais específico para isso.
+
+<header>
+É o cabeçalho da página ou de uma seção da página e normalmente contém logotipos, menus, campos de busca.
+
+<article>
+Representa um conteúdo independente e de maior relevância dentro de uma página, como um post de blog, uma notícia em uma barra lateral ou um bloco de comentários. Um article pode conter outros elementos, como header, cabeçalhos, parágrafos e imagens.
+
+<aside>
+É uma seção que engloba conteúdos relacionados ao conteúdo principal, como artigos relacionados, biografia do autor e publicidade. Normalmente são representadas como barras laterais.
+
+<footer>
+Esse elemento representa o rodapé do conteúdo ou de parte dele, pois ele é aceito dentro de vários elementos, como article e section e até do body. Exemplos de conteúdo de um <footer> são informações de autor e links relacionados.
+
+<h1>-<h6>
+Eles não foram criados na versão 5 do HTML e nem são específicos para semântica, mas servem para esse propósito. São utilizados para marcar a importância dos títulos, sendo <h1> o mais importante e <h6> o menos. Uma dica: use apenas um <h1> por página, pois ele representa o objetivo da sua página.
+
+O href representa o hyperlink para onde sua âncora aponta, pode ser uma página do seu ou de outro site, um e-mail e até mesmo um telefone, os dois últimos precisam dos prefixos mailto: e tel:, respectivamente.
+
+O target neste momento vai servir para nos ajudar a abrir nossos links em outra aba do navegador usando o valor _blank.
+
+Um outro elemento interessante e extremamente necessário na web é o <a> - que significa anchor/âncora, ele representa um hyperlink, é ele que interliga vários conteúdos e páginas na web.
+
+O elemento a tem vários atributos, mas vamos focar em dois, o href e o target.
+
+O href representa o hyperlink para onde sua âncora aponta, pode ser uma página do seu ou de outro site, um e-mail e até mesmo um telefone, os dois últimos precisam dos prefixos mailto: e tel:, respectivamente.
+
+Criarei um hyperlink para meu perfil no LinkedIn: adicione o hyperlink no atributo href e o valor _blank no atributo target, assim o link será aberto em outra aba. E em algum outro lugar do texto adicionarei meu e-mail e um link para ele, desta forma: <a href="mailto:lucas@vilaboim.com" target="_blank">lucas@vilaboim.com</a>
+
+O elemento img é bem simples, contendo apenas 2 atributos próprios, o src e o alt.
+
+O src é obrigatório e guarda o caminho para a imagem que você quer mostrar na página.
+
+O alt não é obrigatório mas é altamente recomendado por melhorar a acessibilidade, ele mostra a descrição da imagem caso ela não carregue e leitores de tela usam esse atributo para descrever a imagem para o usuário saber o que ela significa. 
+
+===========================================================================================================
+||atalhos||
+===========
+ target="_blanck" faz com que abra uma nova aba ao clicar no link
+ex:
+<a href="https://www.instagram.com/hipertrofiapromais/" target="_blanck">clique aqui para ir para o instagram</a>
+<a href="mailto:aguinaldomneto@gmail.com">abrirá o cliente de e-mail</a>
+
+atributos de imagem
+<img> 
+<img src="img/avatar.jpg"> //guarda as informações internas ou externas de imagens
+<img alt="todo de lucas vilaboim"> // descrição da imagem quando não é carregada. Leitores de tela utilizam para descrever a tela
+
+
+listas servem para agrupar itens
+
+<ul>
+    item 1
+    item 2
+</ul> //a ordem dos itens não é importante
+
+<ol>
+    1. item 1
+    2. item 3
+</ol> // a ordem dos itens é importante, são representados por números, letras ou algarismos romanos
+
+<li></li> // é um item dessa lista
+
+
+===========================================================================================================
+||CSS3||
+========
+
+no HTML vc declara seu ID com a palavra ID e no CSS3 uma classe é precedido por um . e um id é precedido com um hash
+
+um id só pode ser usado uma vez na página
+
+
+O a:hover do exemplo significa que a âncora também terá essa aparência quando o usuário passar o mouse por cima de um hyperlink.
+
+ID: é representado pelo símbolo # (hash) seguido de um nome para esse ID.
+
+Classe: a classe é representada de forma parecida do ID, mas é precedida por um ponto em vez do hash.
+
+E a diferença mais importante entre eles é a forma como devem ser usados: o ID só pode ser usado uma vez em uma página HTML enquanto a classe não tem restrições.
+
+
+>> Box-model
+Quando estamos criando o layout de um site o navegador representa cada elemento HTML  como uma caixa retangular, isso é o box-model. E com CSS nós alteramos a aparência dessa caixa (largura, altura, cor de fundo, etc.). Essa caixa é composta por 4 áreas: o conteúdo, o padding, a borda e a margem.
+As margens (margin) são espaçamentos entre elementos;
+As bordas (border) ;
+O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele;
+O conteúdo (content) é o que o seu bloco representa, um texto, uma imagem, um vídeo;
+Se quisermos atribuir tamanhos diferentes para cada lado do box nós podemos, e vamos ver três formas de fazer isso.
+A primeira é colocando um valor para as partes superior e inferior e depois para os lados esquerdo e direito.
+O valor de 10 pixels se refere ao eixo Y, ou partes superior e inferior, e os 5 pixels se referem aos lados esquerdo e direito.
+
+ 
+>> Padding e Margin
+Anteriormente usamos o padding e o margin da forma mais básica, com apenas um valor, mas eles são mais poderosos que isso.
+A segunda forma é dando valores para cada lado do box.
+Então começamos pelo topo com 15 pixels, passamos o lado direito com 10 pixels, depois para a parte inferior com 5 pixels e por último o lado esquerdo com 0, e sempre nessa ordem.
+Uma boa dica também é que quando o valor for 0 não precisamos não precisamos colocar a unidade. 
+A terceira forma é com as propriedades específicas para cada lado, até agora tínhamos visto atalhos para essas propriedades.
+Essa opção é mais usada quando temos o mesmo valor para 3 lados, e o quarto precisa ter um valor diferente, então usamos o padding com apenas um valor e uma dessas opções para representar o lado diferente.
+
+
+>> Background
+A propriedade background também é um atalho para várias propriedades, mas isso vocês podem absorver aos poucos, e uma boa opção de leitura é a documentação do MDN.
+Por enquanto veremos apenas como mudar a cor de fundo.
+E aqui temos 3 formas de colocar uma cor de fundo, e ainda existem outras.
+A primeira é pelo nome da cor em inglês, a segunda é pelo código hexadecimal e a terceira é usando apenas o atalho background.
+
+>> Border
+Vimos que a propriedade border pode ter 3 valores: a largura, a cor e o estilo, mas existem algumas particularidades nisso.
+A largura pode ser usada com várias unidades, como px, em e mm. A cor pode ser atribuída pelo nome ou por um código hexadecimal, assim como fizemos com o background, e o estilo é representada por palavras-chave, vamos ver algumas delas:
+solid: mostra uma borda simples e reta;
+dotted: são bolinhas com um pequeno espaçamento entre elas;
+dashed: forma uma linha tracejada. 
+E se você não quiser usar a propriedade border existem as propriedade específicas para cada aspecto de uma borda, são elas border-width para a largura, border-color para a cor e border-style para o estilo.
+
+Border-radius <border-radius>
+E a última propriedade é o border-radius, ele permite arredondar os cantos de um elemento. Podemos usar várias unidades, mas as mais comuns são os pixels e a porcentagem.
+Colocando apenas um valor mudamos todos os cantos do elemento, mas seguindo aquela mesma ordem que vimos no padding e margin - topo, direita, inferior e esquerda -  conseguimos alterar cada canto separadamente.
+b 
+font-family <font-family> ex: <font-family: verdana, arial ;>
+Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da internet ou uma que esteja instalada no nosso computador, mas vamos nos ater às fontes seguras, chamadas de web safe fonts.
+Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação.
+
+font-size <font-syze> ex: <font-size: 30px;>
+O font-size nos ajuda a mudar o tamanho do texto, existem algumas unidades de medida para ele mas por enquanto os pixels são suficientes para nós.
+
+font-style <font-style> <font-style: normal italic;>
+Usamos o font-style para tornar um texto itálico, na maioria das vezes você usará apenas o valor italic para ele, mas se precisar tirar o itálico de um texto você pode usar o valor normal.
+
+font-weight <font-weight: normal bold (negrito)>
+Altera o peso do texto
+
+text-transform <text-transform: >
+    Altera o texto entre maiúscula e minúscula
+<UPPERCASE> transforma tudo em maiúsculo
+<lowercase> transforma tudo em minúsculo
+<capitalize> aumenta a primeira letra de cada palavra
+
+text-decoration <text-decoration>
+Usado para dar destaque ao texto
+    <underline> coloca um underline (linha a baixo)
+    <overline> coloca uma linha a cima do texto
+    <line-through> coloca uma linha no meio
+
+em <img src=""> as classes são inseridas ao final
+
