@@ -302,5 +302,952 @@ wrapper divs pra encaixar tudo lá dentro
 
 ===========================================================================================================
 ||IDE do VSCODE||
-===================
+=================
+word wrap column, indicar qual a coluna que deve jogar o texto pra baixo.
+Control+P procurar nos arquivos
+control+shift+p pra verificar os comandos
+keyboard shortcuts tras os atalhos pra tela
+extensões linters varrem o código procurando erros.
 
+
+===========================================================================================================
+||JAVASCRIPT||
+==============
+
+Boa prática colocar constantes em letra maiúscula
+
+Constante possui valor fixo
+Variável pode ser alterada
+
+DOM
+Estrutura dos elementos dentro da janela
+
+-->>> inspecionando elemento pelo Chrome
+>> abaixo retorna o h1 
+document.getElementsByTagName('h1')
+>> abaixo seta o heading e retorna o valor de h1
+var heading1 = document.getElementsByTagName('h1')[0]
+>> colocando h1 vermelho
+heading1.style.color = 'red'
+>> se chamar a tag heading1 é retornado
+heading1.style.color = 'red'
+
+<var> – escopo global e local, pode ter seu valor alterado, se não
+tiver um valor inicial será tratada como null;
+
+<let> – escopo local de bloco, pode ter seu valor alterado, se não
+tiver um valor inicial será tratada como null;
+Somente é utilizado dentro do bloco
+
+<const> – escopo local de bloco, somente leitura, o valor inicial é
+obrigatório e não pode ser alterado.
+
+<HOISTING> atribui um valor a uma variável antes de declará-la.
+<redeclaração> só acontece com o var (declarar mais de uma vez)
+<reatribuição> pode ocorrer com o let    
+<camelCase> 
+Atribuição
+como declarar: var nome = “meu nome”;
+como ler: variável nome recebe o valor meunome;
+
+Comparação
+como declarar: "0" == 0; ;
+como ler: “0” tem o valor igual a 0?
+
+Comparação idêntica
+como declarar: "0" === 0; ;
+como ler: “0” tem o valor e o tipo idêntico a 0?
+
+• + adição;
+• - subtração;
+• * multiplicação;
+• / divisão real;
+• % divisão inteira;
+• ** potenciação;
+
+• && - “e” – considera que todos os valores sejam true;
+• || - “ou” – considera que qualquer valor seja true;
+• ! - “não” – inverte o valor de true para false ou vice-versa;
+
+Arrays são um tipo de lista, ou matriz de variáveis, onde cada variável possui um índice. Os valores podem ser de vários tipos
+Deve ser declarado entre [] e pode guardar qualquer valor dentro dos seus indices
+
+<array> é uma caixa com várias caixas dentro
+Ex.: let array = [‘string’, 1, true...]
+
+Podem ter vários arrays dentro do array
+let array = ['string', 1, true, false, [‘array1], [‘array2’]...]
+
+Obs.: O índice só é acessado por um número inteiro, onde 0 é o
+primeiro índice. Cada índice é separado por vírgula.
+
+                                Manipulando Arrays
+
+Ao ser declarado, o Array traz consigo uma série de métodos para
+manipulá-lo.
+
+• forEach() – itera um array;
+• push() – add item no final do array;
+• pop() – remove item no final do array;
+• shift() – remove item no início do array;
+• unshift() – add item no início do array;
+• indexOf() – retorna o índice de um valor;
+• splice() – remove ou substitui um item pelo índice;
+• slice() – retorna uma parte de um array existente;
+
+                                OBJETOS
+Possuem propriedades e valores que definem suas características. Deve ser declarado entre chaves {}
+
+var xicara = {
+cor: ‘azul’,
+tamanho: ‘p’,
+funcao: tomarCafe()
+}
+
+MANIPULANDO OBJETOS 
+
+Outra forma de fazer a desestruturação é utilizando chaves ao
+declarar a variável:
+
+Ex.: var xicara = {cor: ‘azul’, tamanho: ‘p’, funcao: tomarCafe()}
+
+var { cor, tamanho, funcao } = xicara;
+
+                                                
+                                                <if>
+Podemos usar as palavras reservadas “if” para estabelecer uma
+condição:
+Ex.: var jogador1 = 0;
+var jogador2 = 0;
+
+if (jogador1 > 0) {
+console.log(‘jogador1 marcou ponto’);
+}
+// como ler: se o jogador1 tiver valor maior que 0
+ele marcou ponto.
+                                                
+                                                <else>
+
+No caso de a condição não ser atendida podemos usar o “else” :
+Ex.: var jogador1 = 1;
+var jogador2 = 0;
+
+if (jogador1 > 0) {
+console.log(‘jogador1 marcou ponto’);
+} else {
+console.log(‘ninguem marcou ponto’);
+}                                                
+
+                                                <else if>
+
+Caso haja mais de uma condição usamos o “else if“.
+Ex.: var jogador1 = 1;
+var jogador2 = 0;
+
+if (jogador1 > 0) {
+console.log(‘jogador1 marcou ponto’);
+} else if (jogador2 > 0) {
+console.log(‘jogador2 marcou ponto’);
+} else {
+console.log(‘ninguém marcou ponto);
+}                                 
+
+                                                <ninho de if>
+
+Podemos também usar o “if” dentro de um outro “if”, chamamos
+isso de aninhamento de if’s ou ninho de if’s.
+Ex.: if (jogador1 = -1) {
+if (jogador1 > 0) {
+console.log(‘jogador 1 marcou ponto’);
+} else {
+console.log(‘ninguém marcou ponto’);
+}
+} else {
+console.log(‘jogador inválido’);
+}               
+
+
+                                                <If ternário>
+
+Podemos também fazer uma verificação em uma única linha
+usando o “if” ternário:
+
+Ex.: [condição] ? [instrução1] : [instrução2];
+
+jogador1 > 0 ? console.log(‘marcou ponto’) : console.log(‘não
+marcou ponto”);
+
+// lembre de usar a interrogação “?” e dois pontos “:”
+
+                                                <Usando switch/case>
+
+O “switch/case” funciona como uma estrutura condicional
+também;
+
+Ex.: switch (${expressao}) {
+case 1:
+${instrucao};
+break;
+case 2:
+${instrução};
+break;
+}
+
+                                                <Laços de repetição>
+
+São estruturas condicionais que repetem uma instrução até atingir
+determinada condição:
+
+• For;
+• For/in;
+• For/of;
+• While;
+• Do/while;
+
+                                                <For>
+
+Funciona como uma repetição de instrução até que a condição
+seja falsa:
+
+for ([expressaoInicial]; [condicao]; [incremento]) {
+declaracao }
+
+Ex.: var array = [‘valor1’, ‘valor2’, ‘valor3’, ‘valor4’]
+
+for (let i = 0; i < array.length; i++) {
+console.log(i);
+} 
+
+                                                <For/in>
+
+Funciona como uma repetição a partir de uma propriedade:
+
+for ([indice] in [objeto ou array]) {
+declaracao }
+
+Ex.: var array = [‘valor1’, ‘valor2’, ‘valor3’, ‘valor4’]
+
+for (i in array) {
+console.log(i);
+}
+
+                                                <For/of>
+
+Funciona como uma repetição a partir de um valor:
+
+for ([indice] of [array]) {
+declaracao }
+
+Ex.: var array = [‘valor1’, ‘valor2’, ‘valor3’, ‘valor4’]
+
+for (i of array) {
+console.log(i);
+}
+
+                                                <For/of>
+
+O For/of não funciona com objetos pois as propriedades variam,
+diferentes do índice em um array que sempre serão números
+inteiros.
+
+Mas e se eu quiser pegar o valor mesmo assim?
+Ex.: for (i of object.propriedade) {
+console.log(i);
+}
+// porém cada caractere dentro do valor será
+Impresso em linhas separadas.
+                                                <While>
+
+Executa uma instrução “enquanto” determinada condição for
+verdadeira, a verificação é feita antes da execução;
+
+Ex.: var a = 0;
+while (a < 10) {
+a++;
+console.log(a);
+}
+// como ler: enquanto a variável a for menor que 10 ela
+vai receber mais um e imprimir no console.
+
+                                                <Do/while>
+
+Executa uma instrução “até que” determinada condição seja falsa,
+a verificação é feita depois da execução;
+Ex.: var a = 0;
+do {
+a++;
+console.log(a);
+} while (a < 10)
+
+// como ler: a variável a vai receber mais um e imprimir
+no console até que seu valor chegue a 10
+
+                                                <Funções>
+
+São blocos de comandos e instruções para a execução de
+determinadas tarefas:
+
+Ex.: function nomeDaFuncao() {
+${instrucao};
+}
+
+nomeDaFuncao();
+
+() – indica que é um objeto do tipo function;
+{} – indica que é um bloco de instrução;
+
+                                                <Funções declarativas>
+
+São funções que possuem o uso mais comum, deve ser declarada
+usando a palavra reservada “function” seguida do nome da
+função, parênteses “()” e chaves “{}”:
+
+Ex.: function nomeDaFuncao() {
+${instrucao};
+}
+
+// o nome da função é obrigatório;
+
+                                                <Expressões de Funções>
+
+São funções atribuídas à expressões. A nomeação das funções por
+expressão é opcional:
+
+Ex. 1: var funcao = function nomeDaFuncao() {
+
+${instrucao};
+}
+
+Ex. 2: var funcao = function() {
+
+${instrucao};
+};
+
+                                                <Arrow Function>
+
+São funções de expressão de sintaxe curta. Arrow functions
+sempre serão anônimas, e portanto não podem ser nomeadas.
+deve ser declarada com parênteses "()", seguido de "=>" e depois
+chaves "{}"
+
+Ex. 1: var funcao = () => {
+${instrucao};
+}
+
+                                                <Criando uma calculadora>
+Para este exercício vamos utilizar alguns métodos nativos do
+JavaScript:
+
+• Number() – para converter valores em números;
+• Prompt() – para registrar entradas de usuário;
+• Alert() – para mostrar mensagem ao usuário;
+• Template Strings – para usar strings junto com expressões;
+
+                                                <atribuição>
+operador    exemplo equivalente
+=             x=y      x=y 
++=            x +=y    x=x+y
+*=            x*=y     x=x*y
+/=            x/=y     x=x/y
+%=            x%=y     x=x%y
+
++ adição
+- subtração
+* multiplicaçao
+** exponencial
+/ divisao
+% modulo
+++ incrementar
+-- decrementar
+== igual a
+=== mesmo valor e mesmo tipo
+!= diferente
+!== valor e tipo diferentes
+> maior que
+< menor que
+>= maior ou igual
+<= menor ou igual
+LÓGICA
+&& "e" logico
+|| "ou" logico
+! "não" logico
+
+ if ternário:
+ condition ? expression : expression 2
+ condição > ? faça tal : se não faça tal
+
+
+                                                <ATRIBUIÇÕES DE VALORES>
+
+case type                           exemple
+Original variable as string         some awesome var
+camel case                          someAwesameVar
+snake case                          some_awesome_var
+kebab case                          some-awesame-var                                                    
+pascal case                         SomeAwesomeVar
+upper case snake case               SOME_AWESOME_VAR
+
+
+DAR PRIORIDADE NA UTILIZAÇÃO DO LET AO INVES DO VAR
+
+                                                <CONSTANTES>
+Declarada em SNAKE_UPPER_CASE
+escopo de bloco
+Não faz hoisting                                                    
+
+
+                                                <var, let, coinst>
+
+___________________________________________________
+            | var             | const   |   let   |
+escopo      |global ou local  | bloco   |   gloco |
+redeckarar  | sim             | não     |   não   |
+reatribuir  | sim             | não     |   sim   |
+hoisting    | sim             | não     |   não   |              
+___________________________________________________
+
+Javascript é uma linguagem de tipagem dinamica
+(não precisa indicar se é string, number e tals)
+
+typeof para saber qual o tipo do dado no inspecionar
+                                                
+                                                <STRINGS>
+strings são textos
+há a possibilidade de interpolação
+ex:
+
+Const DIO = 'Digital Innovation One';
+
+let firstName = 'João';
+let lastName = 'Luiz';
+
+let fullname = `Nome completo: $(firstname) $(lastname)`;
+String com letra S maiúscula vira um objeto
+
+-->metidos importantes
+Concatenação
+Propriedade length
+Iterabilidade
+Formatação
+
+                                                <booleans>
+
+Retorna verdadeiro ou falso.
+
+                                                <arrays>
+lista iterários de elementos                                                                                                    
+                                                <objetos>
+estrutura do tipo "chave e valor"
+
+
+                                                <funções>
+Variáveis criadas dentro de uma função são utilizadas apenas dentro dela
+Ao chamar o "return" a função para de ser executada                                                    
+
+                                                <função anonima>
+funções que prepresentam expressões, estas serão executadas apenas naquele bloco
+
+const soma = function (a,b) {
+    return a+b;
+} 
+soma (1,2) //3
+soma (4,5) //9
+                                                <fuñções auto inocaveis>
+                                    IIFE immediately invoked funcion expression
+
+Uma função anonica entre parênteses, seguida por outro par de parênteses, que representa sua chamada.
+
+(
+    function () {
+        let name = "Digital innovation one"
+        return name;
+    }
+    )();
+
+pode também ser informados valores
+(
+function (a,b){
+    return a+b;
+
+})(1,2);//3
+
+Pode guardar um valor em uma constante
+
+const soma3 = (
+    function(){
+        return a+b;
+    })(1,2)
+    console.log(soma3)//3
+
+
+                                                <callback>
+É uma função passada como argumento para outra função.
+Utilizando o callback vc tem maior controle da ordem das chamadas
+É UMA FUNÇÃO PASSADA COMO ARGUMENTO PARA OUTRAS FUNÇÕES
+Podemos controlar quando chamar.
+
+const calc = function(operacao,num1,num2){
+    return operacao(num1,num2);
+}
+const soma = function(num1,num2) {
+    return num1 + num2;
+}
+const sub = function(num1,num2) {
+    return num1,num2;
+}
+const resultsoma = calc (soma,1,2);
+const resultsub = calc (sub,1,2);
+
+console.log(resultsub); //-1
+console.log(resultsoma);//3
+
+
+                                                <objeto arguments>
+
+Um array com todos os parâmetros passados quando a função foi invocada.
+
+                                                <arrays>
+
+                                                <spread>
+Uma forma de lidar separadamente com elementos 
+O que era parte de um array se torna um elemento independente.
+
+ex: function sum(x,y,z) {
+    return x+y+z;
+    }
+    const numbers = [1,2,3]
+consule.log(...numbers)); 
+
+                                                <Rest>
+O que era um argumento independente se torna um array
+Combina argumentos em um array
+
+ex: function conferetamanhp (...args) {
+    console.log(args.lenght)
+}                                                    
+conferetamanho() //0
+conferetamanho(1,2) //2
+conferetamanho(3,4,5) ///3
+                                                <objetos>
+                                                object destructuring
+entre chaves {}, podemos filtrar apenas os dados que nos interessam em um objeto 
+
+Para nomear um objeto é só utilizar o : e então o apelido
+                                                
+                                                <if/else>
+>>forma completa
+
+function numeroPositivo(num) {
+    let resultado;
+    if (num < 0) {
+        resultado = false;
+    }
+    else {
+        resultado = true;
+    }
+    return resultado;
+}
+numeroPositivo(2);
+//true
+numeroPositivo(-9);
+ 
+ >>menor
+function numeroPositivo(num) {
+    let resultado;
+    const ehNegativado = num <0;
+    if (ehNegativado) {
+        resultado = false;
+    }
+    else {
+        resultado = true;
+    }
+    return resultado;
+}
+
+    >> reduzida
+
+function numeroPositivo(num) {
+    const ehNegativo = num < 0;
+    const maiorQueDez = num > 10;
+    if (ehNegativo) {
+        return"esse número é negativo!";
+    } else if (!ehNegativo &&maiorQueDez) {
+        return "esse número é positivo é maior que 10!"
+    }
+     return "Esse número é positivo!";
+}
+
+Javascript não possui elseif, as palavras sempre estão espaçadas!
+
+function numeroPositivo(num) {
+    const ehNegativo = num < 0;
+    const maiorQueDez = num > 10;
+    if (ehNegativo) {
+        return"esse número é negativo!";
+    } else if (!ehNegativo &&maiorQueDez) {
+        return "esse número é positivo é maior que 10!"
+    }
+     return "Esse número é positivo!";
+}
+numeroPositivo(5)
+
+
+                                                <switch/case>
+
+equivamente a uma comparação de tipo e valor(===)
+sempre precisa de um valor "default"
+ideal para quando se precisa muitos valores
+
+function getAnima (id) {
+    swith(id) {
+        case 1:
+            return "cao";
+        case 2:
+            return "gato";
+        case 3:
+            return "passaro";
+        default:
+        return "peixe"
+    }
+}                     
+getAnimal (3) //cao
+getAnimal (4) //peixe
+getAnimal ("1") //peixe           
+ 
+
+                                                <for>
+
+loop dentro de elementos iteraveis(arrays, strings)
+
+
+                                                <for in>
+loop entre propriedades enumeráveis de um objeto
+da pra acessar também as propriedades do objeto
+
+                                                <for of>
+loop entre estruturas iteráveis (arrays, strings).
+function (palavra) {
+    for (letra of palavra) {
+        console.log(letra);
+    }
+
+}
+const palavra = "abacaxi";
+logLetras (palavra)
+//1
+//2
+//3
+
+                                                <while>
+executa a instrução até que o resultado seja falsa
+
+function exemplowhile () {
+    let num = 0
+    while (num<=5) {
+        console.log(num);
+        num++;
+    }
+}
+exemplowhile()
+
+                                                <do...while>
+executa instruções até que a condição se torne falsa. Porém a primeira execução sempre ocorre.
+EX: se começar com 6 e o limite for 5, ele irá iniciar com 6 e parar pois já ultrapassou o resultado que era 5
+
+function exemploDoWhile() {
+    let num = 0;
+    do {
+        console.log(num);
+        num++;
+    } while (num<=5);
+}exemploDoWhile()
+
+
+                                                <this>
+sempre que uma função estiver dentro de um objeto chamará de método
+é uma referencia do contexto aode vc está 
+A palavra reservada this é uma referência de contexto
+Num exemplo this refere- se aoi objeto pessoa
+
+const pessoa = {
+    firstName : "Joao",
+    lastName : "soares",
+    id : 1,
+    fullName : function () {
+        return this.firstName + " " + this.lastName;
+    },
+    getid: function(){
+        return this.id;
+    }
+};
+pessoa.fullName();
+
+
+seu valor pode mudar de acordo com o lugar no código onde foi chamada
+================================================================|
+|contexto                |referencia                            |
+|em um objeto(metodo)    |próprio objeto dono do métido         |
+|sozinha                 |objeto global(em navegadores, window) |
+|função                  |objeto global                         |
+|evento                  |elemento recebeu o evento             |
+=================================================================
+
+fora de uma função no próprio vscode ele é um objeto vazio
+no navegadr o this é um objeto glogal.
+dentro de uma função irá retornar como sendo glogal
+dentro de um objeto, como um método irá se referir como um objeto
+pode ser também um elemento dentro de um HTML, como um botão por exemplo.
+
+                                                <call>
+informa qual a referencia que deve ser consultada, ex:
+
+const pessoa = {
+    nome: 'miguel',
+};
+const animal = {
+    nome: 'Murphy',
+};
+function getSomething() {
+    console.log(this.nome);
+}
+getSomething.call(animal);
+
+é possível passar parâmetros para esta função separando por vírgula
+)
+ex:
+const myobj = {
+    num: 2,
+    num2: 4,
+};
+function soma(a,b) {
+    console.log(this.num1 + this.num2 + a + b);
+}
+soma.call (myobj,1,5);
+//12
+
+
+                                                <apply>
+na hora de passar os argumentos, no apply será aplicado dentro de um array
+
+                                                <bind>
+
+clona a estrutura da função aonde é chamada e aplica o valor do objeto passado com um parâmetro
+const retornaNomes = function() {
+    return this.name;
+  };
+  let bruno = retornaNomes.bind({nome:'bruno'});
+  bruno();
+
+
+                                                <sintaxe>
+Uma expressão arrow function possui uma sintaxe mais curta quando comparada a uma expressão de função (function expression) e não tem seu próprio this, arguments, super ou new.target.
+
+grande
+cont helloword = function () {
+    return "hello word";
+}                                                    
+media
+const helloword = () => {
+    return "hello word";
+}
+
+Pequena,
+quando a function ocupa só uma linha não precisará do return
+
+const helloworld = () => "hello word";
+
+Caso exista apenas uma linha, pode dispensar as chaves e o return.
+Caso exista apenas um parâmetro, pode dispensar os parênteses
+
+const soma = (a,b) => a+b;
+soma (4,6);
+//10
+
+const soma = a => a;
+soma(4);
+//4
+
+ARROW FUNCTION NÃO FAZ HOISTING
+
+                                                <restrições da arrow function>
+
+"this" sempre será o objeto global. Metodos para modificar seu valor não irão funcionar.
+não existe o objeto "arguments";
+O construtor (ex: new MeuObjeto()) também não pode ser utilizado;
+sempre utilize uma função comum.
+
+
+
+                                                <sets>
+SETS são uma coleção de valores unicos, não se repetem numca
+
+Adicionar: .add
+consultar: .has
+deletar:   .delete
+
+const myset = new set ();
+myset.add(1);
+myset.has(1);  //true
+myset.delete(5);
+
+                                                <set vs array>
+
+Possui valores únicos
+em ves da propriedade length, consulta- se o número de registros pela propriedade size
+não possui os métodos map, filter, reduce, etc.
+
+
+                                                <ECMAScript error>
+Erros que ocorrem em tempo de excessão.
+composto por:
+> mensagem
+> nome
+> linha
+> call stack
+
+                                                <DOMException>
+
+Erros relacionados ao document objetct model (DOM)
+erros referentes a estrutura
+                                                <TRATAMENTO DE ERROS>                
+
+                                                <throw>
+ se declarado ele mostra que aquela string seria um erro, mostra uma propriedade e características de erro em si
+                                                <return>    
+traz a string declarada para tela como uma crítica ou informação
+
+                                                <try/catch>   
+  try verificará um pedaço de erro e manipular o erro da maneira que preferir, é possível colocar por exemplo o trhow para deixar a tela de erro mais parecida com o trow
+
+todo try precisa de um catch
+
+  function verificaPalindromo(string) {
+    if (!string) throw "string inválida";
+    return string ====
+    string.split ''.reverse().join('');
+  }
+
+  function tryCatchExemplo(string) {
+    try {
+        verificaPalindromo(string)
+    }
+  catch(e) {
+    console.log(e)
+  }
+}
+
+                                                <finally>
+
+Instrução que retorna mesmo sendo um erro ou não, pode ser inserido no try/catch
+bom para inserir a informação de: registro processado com sucesso / registro processado com erro
+
+                                                <Error>
+
+Ele irá aceitar mensagem, o nome do arquivo e a linha aonde está o erro, porém, estas informações dependem da compatibilidade com o navegador, geralmente é utilizado apenas a tag mensagem para definir o erro.
+new Error(menssage, fileName, LineNumber)
+//todos os parâmetros são opcionais
+const meuErro = new Error('mensagem invalida');
+throw MeuErro;
+
+Também pode ser nomeado
+                                                
+                                                <assincrono e assincrono>
+
+ <síncrono>  indica que a mensagem é recebida e pode ser respondida imediatamente
+<Assincrono> é algo que não ocorre ou não se efetiva ao mesmo tempo, responde quando der
+
+    JAVASCRIPT É SINCRONO
+
+
+
+                                                <promises>
+
+promises é um dado que quando é recebido não tem um valor definido e posteriormente este dado poderá chegar ou não.
+objeto de processamento assincrono
+incialmente seu valor é desconhecido. Ela pode então, ser resolvida ou rejeitada
+Quando o dado chega é pending
+são 3 estados
+pendente: quando chega, pendente de informação
+fultilled: completa
+rejected: rejeitada
+
+na sintax abaixo depois de 2 segundos de recebida ele da como resolvida
+const myPromise = new promise ((resolve, reject) => {
+    window.settimeout (() => {
+        resolve(console.log('resolvida'));
+    },2000);
+});
+
+                                                <async>
+precisam de duas palavras chaves
+
+
+
+
+                                                <await>
+faz o código aguardar encerrar o processo para dar seguimento, então ele irá parar o código e mudar o jeito que o javascript irá ver isso
+
+ uma promessi retornara uma outra promissi, é necessário dar um await para dar o resultado
+
+                                                <api's>
+JSON: javascript object notation
+é muito comum que api's retornem seus dados no formato .json, portanto precisamos tratar esses dados quando recebemos
+                                                <fetch>
+Consumindo API's
+o Fetch retorna uma promise
+
+fetch (url, option)
+    .then(response +> response.json())
+    .then(json=> console.log(json))
+//retorna uma promise
+
+precisa utilizar o await
+
+faz operações no banco como (POST, GET, PUT DELETE, etc)
+
+                                                
+                                                <Objetos>
+                                                <paradigmas>
+ Orientação a objetos precisa informar como as coisas vão ser, ordem e tals, formas de programar
+ PrograMAS SÃO "Objetos" que possuem uma série de propriedades
+ pilares:
+ Herança
+ Polimorfismo
+ encapsulamento
+ abstração
+
+Imperativo
+ como irá resolver os problemas 
+
+
+Declarativo
+em que e no que irá resolver os problemas 
+ex: banco de dados em sql ou programação funcional
+
+                                                <pilares>
+                                                <abstração>
+
+"processo mental que consiste em isolar um aspecto determinado de um estado de coisas relativamente complexo, a fim de simplificar a sua avaliação, classificação ou para permitir a comunicação do mesmo"
+
+
+                                                <pilares>
+                                                <herança>
+O objeto herda propriedade e métodos do objeto pai.
+
+                                                <pilares>
+                                                <encapsulamento>
+
+Cada classe tem propriedades e métodos independentes do restante do código
+
+                                                <pilares>
+                                                <polimorfismo>
+Objetos podem herdar a mesma classe pai, mas se comportam de forma diferente quando invocamos seus métodos.
+
+                                                <OOJS>
+                                                <Javascript orientado a objetos>
+                                                <protóticos>
+Todos os objetos javascript herdam propriedades e métodos de um prototype que está no topo da cadeia
+object.prototype
+
+                                                <classes>
+Syntatic sugar> uma sintaxe feita para facilitar a escrita
