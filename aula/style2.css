@@ -1,0 +1,32 @@
+#titulo {
+    margin-top: 100px;
+}
+
+#back {
+
+    background: url("./img/backgorund.png");
+    /* display: flex;
+    border-top: 100px; */
+}
+
+#instagram {
+    margin-top: 50px;
+   padding-bottom: 25px;
+   margin-left: 50px;
+    text-align: left;
+
+
+}
+#Twitter {
+    padding-bottom: 25px;
+
+     margin-left: 50px;
+     text-align: left;
+ 
+ }
+ #Youtube {
+    padding-bottom: 25px;
+
+     margin-left: 50px;
+     text-align: left;
+ }
