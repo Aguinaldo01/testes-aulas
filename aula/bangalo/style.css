@@ -1,0 +1,309 @@
+body{
+    background-color: aliceblue;
+}
+#logo{
+    width: 200px;
+    float: left;
+    border-radius: 50%;
+    clear: none;
+    overflow: auto;
+
+}
+li {
+    display: inline-block;
+    color: white;
+    margin-right: 35px;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
+    
+}
+
+/*----------------------------------------------------------
+Seção HEADER - Topo do Site
+----------------------------------------------------------*/
+.ativo{
+    margin-top: 0px;
+}
+header
+{
+	height:150px;
+	width:100%; 														
+  /*1200px ÷ 1200px = 1 x 100 = 100%*/
+}
+/*
+=========================
+logotipo
+=========================
+*/
+
+header h1 a
+{
+	background:url(http://www.todoespacoonline.com/w/wp-content/uploads/2014/07/minha-logo-723x461.png) no-repeat ; 
+	background-size:contain;											
+  /*estabelece que a imagem cubra o espaço definido para largura e altura da logo*/
+	display:block; 
+	float:left; 
+	height:139px;
+	text-indent:-9999; 
+	width:58.333333333333%; 											
+  /*700px ÷ 1200px = 0.58333333333333 x 100 = 58.333333333333%*/
+}
+
+/*
+=========================
+nav - menu de navegação
+=========================
+*/
+nav
+{
+	float:right;
+	margin-top:78px; 
+	text-align:right; 
+	width:41.6666666666667%; 											
+  /* 500px ÷ 1200px = 0.416666666666667 x 100 = 41.6666666666667%*/
+	border-bottom: 5px solid #E0E0E0; 
+}
+
+nav ul
+{
+	list-style-type:none; 
+}
+
+nav li 
+{
+	display: inline; 
+}
+
+nav ul li a
+{
+	margin-right: 2.5%; 												
+  /*30px ÷ 1200px = 0.025 x 100 = 2.5%*/
+}
+
+nav a:link, nav a:visited
+{
+	color:#FFF;
+	font-size: 1.2222222222em; 											
+  /*22px ÷ 18px = 1.2222222222em */
+	font-weight: 300;
+	letter-spacing: -0.0909090909em; 									
+  /*-2px ÷ 22px = -0.0909090909em */
+	line-height: 1.18181818182em; 										
+  /*26px ÷ 22px = 1.18181818182em */
+	display:inline-block;
+}
+
+nav a.ativo:link, nav a:hover
+{
+	color:#FE9380; 
+}
+
+/*===================================================
+Término da estilização da Seção HEADER
+====================================================*/
+
+body
+{
+  background-image: url(./img/back.jpg);  /*Carrega a imagem que será utilizada como fundo. */
+  background-position: center center;                         /*Posiciona a imagem no centro da página.*/
+  background-attachment: fixed;                               /*Determina que a imagem naõ se mova com o conteúdo.*/
+  background-size:cover;                                     /*Determina que a imagem cubra todo o background.*/
+  background-repeat:no-repeat;                               /*Não permite que a imagem seja repetida no background.*/
+  background-color: #464646;                                 /*Mostra uma cor de fundo enquanto a imagem é carregada.*/
+}
+
+.center
+{
+  margin: 0 auto;             
+  /*Define as margens automáticas da página.*/
+  max-width:1200px;      
+  /*Largura máxima do layout.*/
+  width: 90%;                  
+  /*Ajuste do layout à tela.*/
+}
+ 
+/*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos evitando que os floats se aglomerem.*/
+
+.clearfix:before, .clearfix:after
+{
+  content: " ";
+  display: table;
+}
+
+.clearfix:after
+{
+  clear: both;
+}
+
+.clearfix
+{
+  *zoom: 1;
+}
+/*fim do clearfix*/
+
+img, picture, video, embed 
+{
+  max-width: 100%;      
+  /*define a largura máxima em até 100%*/
+}
+
+h1, h2
+{
+  color:#B22222;
+  font-size: 3.3333333333em;      
+  /*60px ÷ 18px = 3.3333333333em*/
+  font-weight: 800;
+  letter-spacing: -0.05em;            
+  /*-3px ÷ 60px = -0.05em*/
+  line-height: 1em;                       
+  /*60px ÷ 60px = 1em*/
+}
+
+p
+{
+  font-weight: 300;
+  letter-spacing: -0.05555555556em;      
+  /*-1px ÷ 18px = -0.05555555556em*/
+}
+
+a, a:link, a:visited
+{
+  color:#FE9380;              
+  /*Define que o link assuma uma determinada cor quando a página iniciar ou for clicada.*/
+  font-weight:400; 
+  text-decoration:none;
+  /*Define que o texto não terá nenhum efeito especial.*/
+}
+
+a:hover
+{
+  color:#FE5E41;
+  /*Define que o link assuma uma determinada cor quando o mouse passar por cima.*/
+  text-decoration:underline;   
+  /*Define que o texto será sublinhado.*/
+  text-shadow:none; 
+}
+*,*:after,*:before{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+  body{
+    position:relative;
+    margin:0;
+    padding:0;
+    height:100%;
+
+  }
+  .tp{
+    position:relative;
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0.1em; 
+    overflow:hidden;
+    border: 25px solid #EBEBEB;
+  }
+  .tp span{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+  .tp img {
+    display: block;
+    width: 100%;
+  }
+  .tp:after{
+    content: url(https://dl.dropboxusercontent.com/u/23834858/fotos/loader.gif);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    overflow: hidden;
+    z-index: 9999;
+    visibility:hidden;
+    opacity:0;
+    -webkit-animation: loader 5s 1 linear;
+    animation: loader 5s 1 linear;
+  }
+  @-webkit-keyframes loader{
+    0%{
+      opacity:1;
+      visibility:visible;
+      background:#ECF0F1;
+    }
+  }
+  @keyframes loader{
+    0%{
+      opacity:1;
+      visibility:visible;
+      background:#ECF0F1;
+    }
+  }
+  .info{
+    display: block;
+    color: #F78181;
+    margin: 0 auto;
+    padding: 5px;
+    opacity:1;
+    visibility:visible;
+    -webkit-animation: info 7s 1 linear;
+    animation: info 7s 1 linear;
+  }
+  @-webkit-keyframes info{
+    0%{
+      opacity:0;
+      visibility:hidden;
+    }
+  }
+  @keyframes info{
+    0%{
+      opacity:0;
+      visibility:hidden;
+    }
+  }
+  .tp span:after,.tp span:before{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    padding: 5px 10px;
+    overflow:hidden;
+    z-index:9999;
+    opacity:0;
+    -webkit-transform: translate(100%,0);
+    -ms-transform: translate(100%,0);
+    transform: translate(100%,0);
+    background: #F87F7F;
+    border: 1px solid #EC6363;
+    color: #FFF;
+  }
+  .tp span:before {
+    content: attr(data-title);
+    border-botttom: none;
+    -webkit-transition:all 1s ease;
+    transition:all 1s ease;
+  }
+  .tp span:after{
+    content:attr(data-content);
+    top: 28px;
+    text-align: left;
+    border-top: none;
+    -webkit-transition:all 1s ease;
+    transition:all 1s ease;
+  }
+  .tp span:hover:after,.tp span:hover:before{
+    opacity:1;
+    -webkit-transform: translate(0%,0);
+    -ms-transform: translate(0%,0);
+    transform: translate(0%,0);
+    -webkit-transition:all 1s ease;
+    transition:all 1s ease;
+  }
